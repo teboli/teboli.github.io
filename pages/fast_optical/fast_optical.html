@@ -1,0 +1,273 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en"> 
+
+ <head>
+   <title>Fast Two-step Blind Optical Aberration Correction</title>
+   <meta charset="utf-8">
+   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="style.css" rel="stylesheet"> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBMEJQ5GXJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BBMEJQ5GXJ');
+    </script>
+  
+ </head>
+
+
+<body>
+<br>
+    <center>
+    <span style="font-size:42px">Fast Two-step Blind Optical Aberration Correction</span>
+    </center>
+
+  <!-- Names  -->
+    <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://teboli.github.io/">Thomas Eboli</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/">Jean-Michel Morel</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="http://dev.ipol.im/~facciolo/">Gabriele Facciolo</a></span>
+        </center>
+        </td>
+
+      </tr>
+    </table>
+
+	  <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:20px">ECCV 2022</span>
+        </center>
+        </td>
+      </tr>
+    </table>
+
+
+    <!-- Teaser Figure-->
+    <br>
+    <br>
+    <table align=center width=1098px>
+      <tr>
+        <center>
+        <img src="teaser.png" width="900px"></img><br>
+        </center>
+      </tr>
+    </table>
+
+
+    <!-- Teaser Caption-->
+    <div class="container" width="600px">
+      <tr>
+        <td width=400px>
+        <br>
+        <center>
+          <span style="font-size:14px"><i>We propose a blind method to correct the optical aberrations caused by 
+            the point-spread function of the lens, without any prior on the lens or the camera
+            to restore the image. Photograph taken with a Sony FE 35mm f/1.8 lens at maximal aperture mounted on a Sony&alpha;6000 camera.</i>
+        </center>
+        </td>
+      </tr>
+
+      <br>
+
+      <!-- Abstract -->
+      <tr>
+        <td width=400px>
+        <br>
+        <p align="justify" style="font-size: 16px; line-height: 20px;">
+            The optics of any camera degrades the sharpness of photographs, which is a key visual quality criterion. This degradation is
+            characterized by the point-spread function (PSF), which depends on the wavelengths of light and is variable across the imaging field. In this paper,
+            we propose a two-step scheme to correct optical aberrations in a single raw or JPEG image, i.e., without any prior information on the camera
+            or lens. First, we estimate local Gaussian blur kernels for overlapping patches and sharpen them with a non-blind deblurring technique. 
+            Based on the measurements of the PSFs of dozens of lenses, these blur kernels are modeled as RGB Gaussians defined by seven parameters. Second, we
+            remove the remaining lateral chromatic aberrations (not contemplated in the first step) with a convolutional neural network, trained to
+            minimize the red/green and blue/green residual images. Experiments on both synthetic and real images show that the combination of these two stages
+            yields a fast state-of-the-art blind optical aberration compensation technique that competes with commercial non-blind algorithms.
+        </p>
+        </td>
+      </tr>
+    </div>
+
+
+    <!-- Link to paper -->
+    <br>
+    <br>
+    <br>
+    <div class="container" width="600px">
+      <center>
+        <span style="font-size:30px">Paper</span>
+      </center>
+      <br>
+      <center>
+        <tr>
+        <td style="padding-left:0px;padding-right:20px;padding-top:-100000px;"><a href="https://arxiv.org/abs/2208.00950"><img style="height:400px; border: solid" src="paper.png"/></a></td>
+        </tr>
+      </center>
+
+      <br>
+      <center>
+        <i>Correspondence with <a href="mailto:thomas.eboli@ens-paris-saclay.fr">Thomas Eboli.</a></i>
+      </center>
+    </div> 
+
+
+    <!-- Details -->
+    <br>
+    <br>
+    <br>
+    <div class="container" width="900px">
+      <center>
+        <span style="font-size:30px">Results</span>
+      </center>
+
+      <br>
+
+
+      <tr>
+        <center>
+        <img src="example1.png" width="900px"></img><br>
+
+        <table align=center width=900px>
+          <tr>
+            <td align=center width=150px>
+            <center>
+            <span style="font-size:20px">Original</a></span>
+            </center>
+            </td>
+
+            <td align=center width=150px>
+            <center>
+            <span style="font-size:20px">Yue <i>et al.</i> [1]</a></span>
+            </center>
+            </td>
+
+            <td align=center width=150px>
+            <center>
+            <span style="font-size:20px">Li <i>et al.</i> [2]</a></span>
+            </center>
+            </td>
+
+            <td align=center width=150px>
+            <center>
+            <span style="font-size:20px">Ours</a></span>
+            </center>
+            </td>
+
+          </tr>
+        </table>  
+
+        </center>
+      </tr>
+
+      <br>
+      <br>
+
+      <tr>
+        <center>
+        <img src="example2.png" width="900px"></img><br>
+        </center>
+      </tr>
+
+        <center>
+
+        <table align=center width=900px>
+          <tr>
+            <td align=center width=300px>
+            <center>
+            <span style="font-size:20px">Original</a></span>
+            </center>
+            </td>
+
+            <td align=center width=300px>
+            <center>
+            <span style="font-size:20px">DxO [3]</a></span>
+            </center>
+            </td>
+
+            <td align=center width=300px>
+            <center>
+            <span style="font-size:20px">Ours</a></span>
+            </center>
+            </td>
+
+          </tr>
+        </table>  
+
+        </center>
+      </tr>
+
+      <br>
+      <br>
+
+      <tr>
+        <center>
+        <img src="example3.png" width="900px"></img><br>
+        </center>
+
+        <center>
+        <table align=center width=900px>
+          <tr>
+            <td align=center width=300px>
+            <center>
+            <span style="font-size:20px">Original</a></span>
+            </center>
+            </td>
+
+            <td align=center width=300px>
+            <center>
+            <span style="font-size:20px">DxO[3]</a></span>
+            </center>
+            </td>
+
+            <td align=center width=300px>
+            <center>
+            <span style="font-size:20px">Ours</a></span>
+            </center>
+            </td>
+
+          </tr>
+        </table>  
+
+        </center>
+      </tr>
+
+    </div> 
+
+    <br>
+    <br>
+
+    <div class="container" width="600px">
+      <p>[1] Yue <i>et al.</i>: Blind optical aberration correction by exploring geometric and visual priors. CVPR 2015</p>
+      <p>[2] Li <i>et al.</i>: Universal and flexible optical aber- ration correction using deep-prior based deconvolution. ICCV 2021</p>
+      <p>[3] DxO PhotoLab 5</p>
+    </div>
+
+
+</body>
+</html>
