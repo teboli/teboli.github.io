@@ -1,0 +1,12 @@
+@article{lecouat22hdrsr,
+    author       = {Bruno Lecouat and
+                    Thomas Eboli and
+                    Jean Ponce and
+                    Julien Mairal},
+    title        = {High dynamic range and super-resolution from raw image bursts},
+    journal      = {{ACM} Transactions on Graphics},
+    volume       = {41},
+    number       = {4},
+    pages        = {38:1--38:21},
+    year         = {2022},
+}

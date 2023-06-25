@@ -1,0 +1,343 @@
+ <!DOCTYPE html>
+ <html lang="en"> 
+
+ <head>
+   <title>High Dynamic Range and Super-Resolution from Raw Image Bursts</title>
+   <link rel="icon" href="./images/logo-site-200x200.png" type="image/x-icon">
+   <meta charset="utf-8">
+   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="style.css" rel="stylesheet"> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBMEJQ5GXJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BBMEJQ5GXJ');
+    </script>
+  
+ </head>
+
+
+<body>
+<br>
+    <center>
+    <span style="font-size:42px">High Dynamic Range and Super-Resolution from Raw Image Bursts</span>
+    </center>
+
+  <!-- Names  -->
+    <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://bruno-31.github.io/">Bruno Lecouat</a><sup>1</sup></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://teboli.github.io/">Thomas Eboli</a><sup>2</sup></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://www.di.ens.fr/~ponce/">Jean Ponce</a></a><sup>1,3</sup></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://lear.inrialpes.fr/people/mairal/">Julien Mairal</a><sup>1,4</sup></span>
+        </center>
+        </td>
+
+      </tr>
+    </table>
+
+    <br>
+    <table align=center width=900px>
+      <tr>
+        <td align=center width=225px>
+        <center>
+        <span style="font-size:20px">INRIA<sup>1</sup></span>
+        </center>
+        </td>
+
+        <td align=center width=225px>
+        <center>
+        <span style="font-size:20px">ENS Paris-Saclay<sup>2</sup></span>
+        </center>
+        </td>
+
+        <td align=center width=225px>
+        <center>
+        <span style="font-size:20px">New York University<sup>3</sup></span>
+        </center>
+        </td>
+
+        <td align=center width=225px>
+        <center>
+        <span style="font-size:20px">Univ. Grenoble Alpes<sup>4</sup></span>
+        </center>
+        </td>
+
+      </tr>
+    </table>
+
+	<br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:20px">SIGGRAPH 2022</span>
+        </center>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://arxiv.org/abs/2207.14671">Paper</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://www.youtube.com/watch?v=pXOeeXYCikI">Video</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="assets/bibtex.txt">Bibtex</a></span>
+        <!-- <span style="font-size:20px"><a href="./bibtex.txt">Bibtex</a></span> -->
+        </center>
+        </td>
+
+      </tr>
+    </table>
+
+
+    <!-- Teaser Figure-->
+    <br>
+    <br>
+    <table align=center width=1098px>
+      <tr>
+        <center>
+        <img src="./assets/teaser.png" width="1000px"></img><br>
+        </center>
+      </tr>
+    </table>
+
+
+    <!-- Teaser Caption-->
+    <div class="container" width="600px">
+      <tr>
+        <td width=400px>
+        <br>
+        <center>
+          <span style="font-size:14px"><i>An example of joint super-resolution (SR) 
+            and high-dynamic range (HDR) imaging. Left: An 18-photo burst was shot 
+            at night from a hand-held Pixel 4a smartphone at 12MP resolution with an 
+            exposure time varying from 1/340s to 1/4s. The left half of the central 
+            image from the burst is shown along with the right half of the 192MP HDR 
+            image reconstructed by our algorithm with a super-resolution factor of ×4 
+            (after tone mapping). Right: Three small crops of the two images 
+            corresponding to the colored square regions on the left. Crops from the 
+            central image of the burst are rendered using Adobe Camera Raw to
+            convert raw files into jpg with highest quality setting. The HDR/SR results 
+            are rendered using the PhotoMatix tone mapper. Note that the 192MP HDR image 
+            on the left is not reproduced at full resolution because of the corresponding file’s size</i>
+        </center>
+        </td>
+      </tr>
+    </div>
+
+      <br>
+
+      <!-- Abstract -->
+      <div class="container" width="600px">
+        <center>
+          <span style="font-size:30px">Abstract</span>
+        </center>
+        <br>
+        <p align="justify" style="font-size: 16px; line-height: 20px;">
+            Photographs captured by smartphones and mid-range cameras have limited
+            spatial resolution and dynamic range, with noisy response in underexposed
+            regions and color artefacts in saturated areas. This paper introduces the
+            first approach (to the best of our knowledge) to the reconstruction of high-resolution, 
+            high-dynamic range color images from raw photographic bursts
+            captured by a handheld camera with exposure bracketing. This method uses
+            a physically-accurate model of image formation to combine an iterative
+            optimization algorithm for solving the corresponding inverse problem with
+            a learned image representation for robust alignment and a learned natural
+            image prior. The proposed algorithm is fast, with low memory requirements
+            compared to state-of-the-art learning-based approaches to image restoration, and 
+            features that are learned end to end from synthetic yet realistic
+            data. Extensive experiments demonstrate its excellent performance with
+            super-resolution factors of up to ×4 on real photographs taken in the wild
+            with hand-held cameras, and high robustness to low-light conditions, noise,
+            camera shake, and moderate object motion.
+        </p>
+        </td>
+      </tr>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <div class="container" width="600px">
+      <center>
+        <span style="font-size:30px">Citation</span>
+      </center>
+      <br>
+    <pre><code>
+            @article{lecouat22hdrsr,
+                  author       = {Bruno Lecouat and
+                                  Thomas Eboli and
+                                  Jean Ponce and
+                                  Julien Mairal},
+                  title        = {High dynamic range and super-resolution from raw image bursts},
+                  journal      = {{ACM} Transactions on Graphics},
+                  volume       = {41},
+                  number       = {4},
+                  pages        = {38:1--38:21},
+                  year         = {2022},
+                }
+        </code></pre>
+    </div>
+
+    
+    <!-- video -->
+    <br>
+    <br>
+    <br>
+    <div class="container" width="600px">
+      <center>
+        <span style="font-size:30px">10-minute video presentation</span>
+      </center>
+      <br>
+      <center>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=pXOeeXYCikI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </center>
+    </div>
+
+
+   <!-- Results -->
+   <br>
+    <br>
+    <br>
+    <div class="container" width="600px">
+      <center>
+        <span style="font-size:30px">Joint HDR and SR</span>
+      </center>
+      <br>
+      <p>
+      Joint HDR imaging and super-resolution ×4 with a burst taken with a hand-held Pixel4a at night, 
+      facing a spotlight. Top: The original burst. Middle: The central image in the burst (left) and 
+      the reconstructed HDR/SR image after tone mapping (right). Bottom: Six crops showing details of 
+      the original and HDR/SR images, presented respectively in the first and second rows.
+      </p>
+        <table align=center width=1098px>
+          <tr>
+            <center>
+            <img src="assets/large_figure.png" width="900px"></img><br>
+            </center>
+          </tr>
+        </table>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <div class="container" width="600px">
+      <center>
+        <span style="font-size:30px">HDR via bracketing</span>
+      </center>
+      <br>
+      <p>
+    Our method partly relies on exposure bracketing for restoring at the same time 
+    the saturated areas with the least exposed frames, and the highly noisy darker 
+    areas thanks to the brightest ones. An example is shown below. On the left: 
+    Three high dynamic range, high-resolution images obtained by our method from 
+    18-image bursts taken by a handheld Pixel 4a smartphone with a ×4 super-resolution 
+    factor. We show post-processed sRGB pictures for the sake of presentation. On 
+    the right: Small crops from sample photos in the burst and our reconstruction. 
+    Note the high level of noise in the short-exposure images, in particular in the 
+    second row, and the saturated regions in the long-exposure ones. As shown by the 
+    last column of the figure, our algorithm recovers details in saturated areas and 
+    remove noise in the darkest regions. The reader is invited to zoom in on a computer screen.
+      </p>
+
+        <table align=center width=1098px>
+          <tr>
+            <center>
+            <img src="assets/frame_number.png" width="900px"></img><br>
+            </center>
+          </tr>
+        </table>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <div class="container" width="600px">
+      <center>
+        <span style="font-size:30px">Improved multi-frame super-resolution</span>
+      </center>
+      <br>
+      <p>
+    Visual comparison for super-resolution only on real same-exposure raw bursts, 
+    of respectively 20 and 30 frames, with state-of-the-art
+    competitors. We do not present HDR results in this figure. Our approach limits 
+    Moiré artefacts in the first row and reveals in general more high frequency
+    image details in both rows. The last row shows an example requiring deghosting. 
+    The ghosted LR image on the left is obtained by averaging the whole burst to
+    show the pedestrian’s motion. Bhat et al. [2021a] and our method effectively 
+    handle small object motions. The reader is invited to zoom in.
+      </p>
+
+        <table align=center width=1098px>
+          <tr>
+            <center>
+            <img src="assets/sr.png" width="900px"></img><br>
+            </center>
+          </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="container" width="600px">
+      <center>
+        <span style="font-size:30px">References</span>
+      </center>
+      <br>
+      <ul>
+        <li>Bhat et al. Deep Burst Super-Resolution, CVPR 2021</li>
+        <li>Lecouat et al. Lucas-Kanade Reloaded: End-to-End Super-Resolution from Raw Image Bursts, ICCV 2021</li>
+        <li>Luo et al., EBSR: Feature enhanced burst super-resolution with de- formable alignment, ICCVW 2021</li>
+      </ul>
+  </div>
+
+    <br>
+    <br>
+
+</body>
+</html>

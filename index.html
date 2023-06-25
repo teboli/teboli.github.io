@@ -5,6 +5,20 @@
  <head>
    <title>Thomas Eboli</title>
    <link rel="icon" href="./images/logo-site-200x200.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   <style>
+    .fixed-row {
+      height: 200px; /* Adjust the height value as per your requirements */
+    }
+   </style>
+   <style>
+      .img-thumbnail {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+      }
+   </style>
    <meta charset="utf-8">
    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
@@ -97,7 +111,7 @@
 
 
 
-<!-- Collaborative Blind Image Deblurring -->
+
 <div class="row" style="text-align:left; padding-bottom:0rem">
     <div class="col-xs-10 col-sm-4 col-md-4">
         <img class="img-thumbnail mb-3" src="./images/paper_collaborative.png" alt="Collaborative Blind Image Deblurring">
@@ -116,7 +130,7 @@
 </div>
 
 
-<!-- SING -->
+
 <div class="row" style="text-align:left; padding-bottom:0rem">
     <div class="col-xs-10 col-sm-4 col-md-4">
         <img class="img-thumbnail mb-3" src="./images/paper_sing.png" alt="SING: A Plug-and-Play DNN Learning Technique" style="padding: 0 10%;">
@@ -135,7 +149,7 @@
 </div>
 
 
-<!-- Realistic Low-Resolution Raw Image Simulation for Learning Super-Resolution -->
+
 <div class="row" style="text-align:left; padding-bottom:0rem">
     <div class="col-xs-10 col-sm-4 col-md-4 justify-content-center">
         <img class="img-thumbnail mb-3" src="./images/paper_realistic_sr.png" alt="Realistic Low-Resolution Raw Image Simulation for Learning Super-Resolution" style="padding: 0 30%;">
@@ -154,7 +168,7 @@
 </div>
 
 
-<!-- Fast chromatic aberration correction with 1D filters -->
+
 <div class="row" style="text-align:left; padding-bottom:0rem">
     <div class="col-xs-10 col-sm-4 col-md-4">
         <img class="img-thumbnail mb-3" src="./images/paper_1d_chromatic.png" alt="Fast chromatic aberration correction with 1D filters">
@@ -174,7 +188,7 @@
 </div>
 
 
-<!-- Handheld Burst Super-Resolution Meets Multi-Exposure Satellite Imagery -->
+
 <div class="row" style="text-align:left; padding-bottom:0rem">
     <div class="col-xs-10 col-sm-4 col-md-4">
         <img class="img-thumbnail mb-3" src="./images/paper_satellite_handheld.png" alt="Handheld Burst Super-Resolution Meets Multi-Exposure Satellite Imagery"  style="padding: 0 10%;">
@@ -187,13 +201,14 @@
       <b>
         <a href="https://arxiv.org/abs/2303.05879">[paper]</a>
         <a href="https://github.com/Jamy-L/handheld-sr-satellite">[code]</a>
+        <a href="https://docs.google.com/presentation/d/1t8dYAhiEaGdRRNMtlCKG9tGm6gSRrahL/edit#slide=id.p1">[poster]</a>
         </b>
       </p>
     </div>
 </div>
 
 
-<!-- Implementing Handheld Burst Super-resolution -->
+
 <div class="row" style="text-align:left; padding-bottom:0rem">
     <div class="col-xs-10 col-sm-4 col-md-4">
         <img class="img-thumbnail mb-3" src="./images/paper_handheld.png" alt="Implementing Handheld Burst Super-Resolution">
@@ -267,6 +282,7 @@
       <span>SIGGRAPH, 2022 </span> <br>
       <b>
         <a href="https://arxiv.org/abs/2207.14671">[paper]</a>
+        <A href="hdr_sr_raw_burst/index.html">[webpage]</A>
         <a href="https://www.youtube.com/watch?v=pXOeeXYCikI">[video]</a>
         </b>
       </p>
@@ -305,6 +321,7 @@
 </div>
 
 
+
 <div class="row" style="text-align:left; padding-bottom:0rem">
     <div class="col-xs-10 col-sm-4 col-md-4">
         <img class="img-thumbnail mb-3" src="./images/paper_structured.png" alt="Structured and Localized Image Restoration" style="padding: 0 30%;">
@@ -320,6 +337,7 @@
       </p>
     </div>
 </div>
+
 
 
 <div class="row" style="text-align:left; padding-bottom:0rem">
@@ -408,6 +426,7 @@
 <div class="container">
   <h3>Teaching</h3>
   <ul>
+    <li>Fall 2022 <a href="https://ens-paris-saclay.fr/en/education/other-diplomas/aria-diploma-artificial-intelligence">Research year in Artificial Intelligence</a>, supervisor - ARIA Masters - ENS Paris-Saclay</li>
      <li>Fall 2020 <a href="http://math.ens-paris-saclay.fr/version-francaise/formations/master-mva/contenus-/object-recognition-and-computer-vision-221990.kjsp?RH=1242430202531">Object recognition and computer vision</a>, TA - MVA Masters</li>
     <li>Fall 2019 <a href="http://math.ens-paris-saclay.fr/version-francaise/formations/master-mva/contenus-/object-recognition-and-computer-vision-221990.kjsp?RH=1242430202531">Object recognition and computer vision</a>, TA - MVA Masters</li>
     <li>Spring 2019 <a href="https://imagine.enpc.fr/~monasse/Info/">Introduction to programming</a> TA - Undergraduate level - Ecole Nationale des Ponts et Chaussees</li>
@@ -421,6 +440,17 @@
   <ul>
     <li>2022/09, <a href="https://light.princeton.edu">Princeton Computational Imaging Lab</a> weekly seminar (Virtual)</li>
     <li>2021/04, <a href="https://cds.nyu.edu">NYU Center for Data Science</a> weekly seminar (Virtual)</li>
+  </ul>
+</div>
+
+
+<div class="container">
+  <h3>Computational photography awesome resources</h3>
+  Here are some resources I really like to better understanding principles from many fields related to computer vision, and in particular computational photograpy and image processing. I often relate to them as off-the-road textbooks. Kudos to the authors!
+  <ul>
+    <li>Bart Wronski musing about image gradients in his <a href="https://bartwronski.com/2021/02/28/computing-gradients-on-grids-forward-central-and-diagonal-differences/">blog</a></li>
+    <li>Mitsuba's awesome <a href="https://mitsuba.readthedocs.io/en/latest/src/key_topics/polarization.html">tutorial</a> on polarized light.</li>
+    <li>Roger N. Clark's personal <a href="https://clarkvision.com/index.html">website</a> on photography. It covers several topic such as ISO and dynamic range, and is a real crash course on computanional photography for any newcomer to the field.
   </ul>
 </div>
 
