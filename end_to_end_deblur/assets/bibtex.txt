@@ -1,0 +1,8 @@
+@inproceedings{eboli20endtoend,
+  author       = {Thomas Eboli and Jian Sun and Jean Ponce},
+  title        = {End-to-end Interpretable Learning of Non-blind Image Deblurring},
+  booktitle    = {European Conference on Computer Vision},
+  pages        = {314--331},
+  publisher    = {Springer},
+  year         = {2020}
+}

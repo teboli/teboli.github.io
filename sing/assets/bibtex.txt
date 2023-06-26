@@ -1,0 +1,7 @@
+@misc{courtois23sing,
+  author       = {Adrien Courtois and Damien Scieur and Jean{-}Michel Morel and Pablo Arias and Thomas Eboli},
+  title        = {{SING:} {A} Plug-and-Play {DNN} Learning Technique},
+  eprint       = {2305.15997},
+  archivePrefix= {arXiv},
+  year         = {2023}
+}

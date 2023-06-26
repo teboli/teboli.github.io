@@ -1,0 +1,7 @@
+@inproceedings{lafenetre23handheld,
+  author    = {Jamy Lafenetre and Ngoc Long Nguyen and Gabriele Facciolo and Thomas Eboli},
+  title     = {Handheld Burst Super-Resolution Meets Multi-Exposure Satellite Imagery},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+  pages     = {2055-2063},
+  year      = {2023}
+}
