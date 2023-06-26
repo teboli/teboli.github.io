@@ -1,0 +1,162 @@
+ <!DOCTYPE html>
+ <html lang="en"> 
+
+ <head>
+   <title>Collaborative Blind Image Deblurring</title>
+   <link rel="icon" href="./images/logo-site-200x200.png" type="image/x-icon">
+   <meta charset="utf-8">
+   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="style.css" rel="stylesheet"> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBMEJQ5GXJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BBMEJQ5GXJ');
+    </script>
+  
+ </head>
+
+
+<body>
+<br>
+    <center>
+    <span style="font-size:42px">Collaborative Blind Image Deblurring</span>
+    </center>
+
+  <!-- Names  -->
+    <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://teboli.github.io/">Thomas Eboli</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/">Jean-Michel Morel</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="http://dev.ipol.im/~facciolo/">Gabriele Facciolo</a></span>
+        </center>
+        </td>
+
+      </tr>
+    </table>
+
+    <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:20px">ENS Paris-Saclay</span>
+        </center>
+        </td>
+      </tr>
+    </table>
+
+<!--     <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:20px">ECCV 2022</span>
+        </center>
+        </td>
+      </tr>
+    </table> -->
+
+
+    <br>
+    <table align=center width=600px>
+      <tr>
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://arxiv.org/abs/2305.16034">Paper</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="https://github.com/teboli/collaborative_deblurring">Code</a></span>
+        </center>
+        </td>
+
+        <td align=center width=166px>
+        <center>
+        <span style="font-size:20px"><a href="assets/bibtex.txt">Bibtex</a></span>
+        </center>
+        </td>
+
+      </tr>
+    </table>
+
+
+    <!-- Teaser Figure-->
+    <br>
+    <br>
+    <table align=center width=1098px>
+      <tr>
+        <center>
+        <img src="assets/teaser.png" width="900px"></img><br>
+        </center>
+      </tr>
+    </table>
+
+
+    <!-- Teaser Caption-->
+    <div class="container" width="600px">
+      <tr>
+        <td width=400px>
+        <br>
+        <center>
+          <span style="font-size:14px"><i>Three real instances of blur: camera shake from the 
+            RealBlur dataset (scene 118, image 2), a subset of the local calibrated optical 
+            aberrations from the Canon EF24mm f/1.4L USM opened at f/2.8, and the result of 
+            the ×2 multi-frame super-resolution. For shake the light streaks 
+            suggest the blur is roughly the same everywhere, thus patches can be sampled uniformly. 
+            The same holds for fusion blur where the fused image globally lacks of sharpness. The 
+            aberrations are all unique but roughly follow a central symmetry, thus easy to sample.</i>
+        </center>
+        </td>
+      </tr>
+    </div>
+
+    <br>
+
+    <!-- Abstract -->
+    <div class="container" width="600px">
+        <center>
+          <span style="font-size:30px">Abstract</span>
+        </center>
+        <br>
+        <p align="justify" style="font-size: 16px; line-height: 20px;">
+            Blurry images usually exhibit similar blur at various locations across the image 
+            domain, a property barely captured in nowadays blind deblurring neural networks. 
+            We show that when extracting patches of similar underlying blur is possible, jointly 
+            processing the stack of patches yields superior accuracy than handling them separately. 
+            Our collaborative scheme is implemented in a neural architecture with a pooling layer 
+            on the stack dimension. We present three practical patch extraction strategies for 
+            image sharpening, camera shake removal and optical aberration correction, and validate 
+            the proposed approach on both synthetic and real-world benchmarks. For each blur 
+            instance, the proposed collaborative strategy yields significant quantitative and 
+            qualitative improvements.
+        </p>
+    </div>
+
+
+</body>
+</html>
