@@ -1,0 +1,10 @@
+@inproceedings{eboli22fast,
+  author       = {Thomas Eboli and
+                  Jean{-}Michel Morel and
+                  Gabriele Facciolo},
+  title        = {Fast Two-Step Blind Optical Aberration Correction},
+  booktitle    = {European Conference on Computer Vision},
+  pages        = {693--708},
+  publisher    = {Springer},
+  year         = {2022}
+}
