@@ -1,0 +1,7 @@
+@article{lafenetre23handheld,
+    title   = {Implementing Handheld Burst Super-Resolution},
+    author  = {Jamy Lafenetre and Gabriele Facciolo and Thomas Eboli},
+    journal = {Image Processing On Line},
+    volume  = {13},
+    year    = {2023},
+}

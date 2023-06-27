@@ -1,0 +1,8 @@
+@article{eboli22polyblur,
+    title   = {Breaking down Polyblur: Fast Blind Correction of Small Anisotropic Blurs},
+    author  = {Thomas Eboli and Jean-Michel Morel and Gabriele Facciolo},
+    journal = {Image Processing On Line},
+    volume  = {12},
+    pages   = {435--456},
+    year    = {2022},
+}

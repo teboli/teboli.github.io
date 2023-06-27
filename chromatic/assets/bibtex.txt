@@ -1,0 +1,7 @@
+@article{eboli23chromatic,
+    title   = {Fast Chromatic Aberration Correction with 1D Filters},
+    author  = {Thomas Eboli},
+    journal = {Image Processing On Line},
+    volume  = {13},
+    year    = {2023},
+}
