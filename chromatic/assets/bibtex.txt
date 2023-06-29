@@ -3,5 +3,6 @@
     author  = {Thomas Eboli},
     journal = {Image Processing On Line},
     volume  = {13},
+    pages   = {198--214},
     year    = {2023},
 }
